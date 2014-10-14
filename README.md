@@ -11,6 +11,7 @@ LCD Screen Code
 |      |     |     |         |
 
 Nokia1202 LCD BoosterPack v4-5
+
 | Name | Pin# | Type   | PxDIR | PxREN | PxOUT |
 |:----:|------|--------|-------|-------|-------|
 | GND  | 20   | Power  | N/A   | N/A   | N/A   |
@@ -25,6 +26,7 @@ Nokia1202 LCD BoosterPack v4-5
 | S4   | 12   | Input  | 0     | 1     | 1     |
 
 Configure the MSP430
+
 | Mystery Label | Register |
 |---------------|----------|
 | A             | P1DIR    |
