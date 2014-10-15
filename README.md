@@ -3,13 +3,6 @@ Lab3Cabusora
 
 LCD Screen Code
 
-| Line | R12 | R12 | Purpose |
-|:----:|-----|-----|---------|
-|      |     |     |         |
-|      |     |     |         |
-|      |     |     |         |
-|      |     |     |         |
-
 Nokia1202 LCD BoosterPack v4-5
 
 | Name | Pin# | Type   | PxDIR | PxREN | PxOUT |
@@ -34,3 +27,29 @@ Configure the MSP430
 | C             | P2DIR    |
 | D             | P2OUT    |
 
+| D        | Bit | Function as set in the code                       |
+|----------|-----|---------------------------------------------------|
+| UCCKPH   | 7   | Clock phase select                                |
+| UCMSB    | 5   | Controls direction of Tx/Rx shift registers       |
+| UCMST    | 3   | Master mode select                                |
+| UCSYNCH  | 0   | Synchronous mode enabled                          |
+| UCSSEL_2 | 6-7 | Select SMCLK as BRCLK source clock in master mode |
+| UCSWRST  | 0   | Software rest eneable                             |
+
+Communicate to the Nokia1202 Display
+
+| Symbolic Constant            | Hex | Function                                  |
+|------------------------------|-----|-------------------------------------------|
+| #STE2007_REST                | E2  | Internal reset                            |
+| #STE2007_DISPLAYALLPOINTSOFF | A4  | LCD display, normal display               |
+| #STE2007_POWERCONTROL        | N/A | Sets on chip power supply function        |
+| #STE2007_POWERCTRL_ALL_ON    | 2F  | Booster, volt regulator & follower all on |
+| #STE2007_DISPLAYNORMAL       | A6  | LCD display, normal                       |
+| #STE2007_DISPLAYON           | AF  | Display turned on  
+
+| Line | R12 | R12 | Purpose |
+|:----:|-----|-----|---------|
+|      |     |     |         |
+|      |     |     |         |
+|      |     |     |         |
+|      |     |     |         |
