@@ -101,16 +101,19 @@ The program then loops and makes 8 columns.  It compares #WIDTH (0x08) to the va
 
 Once the block is drawn, R13 and R12 are popped out, and the program ends.
 
+(Additional Note:  In lines 60 and 61, I moved #0x34 into R12 and #0x29 into R13.  This centers the block, and was purely for aesthetic reasons.)
+
 ##Documentation
 
 For the Prelab, I got together with the following cadets to understand what the Mega Prelab was asking, as well as using teamwork to find data on the LCD screen and MSP430 datasheets:
+
 
 C2C Nathan Ruprecht
 C2C Eric Thompson
 C2C Austin Bolinger
 C2C Sabin Park
 C2C Kyle Jonas
-C2C Jermy Gruszka
+C2C Jeremy Gruszka
 C2C Taylor Bodin
 C2C Jarrod Wooden
 C2C Sean Bapty
@@ -119,5 +122,6 @@ C2C Chris Kiernan
 C2C J.P. Terragnoli
 C2C Hunter Her
 C2C Gytenis Borusas
+
 
 For the lab, I consulted C2C Kyle Jonas about how to display the block, and he advised me to enter in 0xFF to fill in the empty pixels in the original code.  We also helped each other operate the logic analyzer.  The rest of the work is my own.
