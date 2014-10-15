@@ -53,6 +53,8 @@ LCD Screen Code
 
 ##Main Lab
 
+###writeNokiabyte Instances
+
 | Line | R12  | R13  | Purpose                                                                                                         |
 |------|------|------|-----------------------------------------------------------------------------------------------------------------|
 | 66   | 0x01 | 0xE7 | R12: specifies data, R13: holds an 8-bit value which translates to a 8 pixel length vertical column (1110 0111) |
@@ -85,4 +87,37 @@ Fourth Time Interval
 
 ![Writing Modes](https://github.com/KevinCabusora/Lab3Cabusora/blob/master/Writing%20Modes.png)
 
+###Functionality
 
+[Required Functionality](https://github.com/KevinCabusora/Lab3Cabusora/blob/master/ReqFunctionality.asm)
+
+To implement the requirement, which was to create a 8x8 box, I called setAddress, where R12 refers to the row address and R13 refers to column address.  I then pushed R12 and R13.
+
+I used R15 as my index.  To initialize it, I cleared it first.  Over time it will be incremented.
+
+In drawBox, I moved #NOKIA_DATA into R12.  The value #0xFF, which represents a vertical line, is stored into R13.
+
+The program then loops and makes 8 columns.  It compares #WIDTH (0x08) to the value in the index, which has been incrementing everytime it draws a column of the block.  
+
+Once the block is drawn, R13 and R12 are popped out, and the program ends.
+
+##Documentation
+
+For the Prelab, I got together with the following cadets to understand what the Mega Prelab was asking, as well as using teamwork to find data on the LCD screen and MSP430 datasheets:
+
+C2C Nathan Ruprecht
+C2C Eric Thompson
+C2C Austin Bolinger
+C2C Sabin Park
+C2C Kyle Jonas
+C2C Jermy Gruszka
+C2C Taylor Bodin
+C2C Jarrod Wooden
+C2C Sean Bapty
+C2C Erica Lewandowski
+C2C Chris Kiernan
+C2C J.P. Terragnoli
+C2C Hunter Her
+C2C Gytenis Borusas
+
+For the lab, I consulted C2C Kyle Jonas about how to display the block, and he advised me to enter in 0xFF to fill in the empty pixels in the original code.  We also helped each other operate the logic analyzer.  The rest of the work is my own.
